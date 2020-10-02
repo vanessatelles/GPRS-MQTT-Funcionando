@@ -6,7 +6,7 @@
   - subscribes to the topic "test/in"
 */
 
-#define GSMAPN "gprs.oi.com.br"
+#define GSMAPN "gprs.oi.com.br" //change with your M2M chip mobile operator 
 #define GSMUSER "oi"
 #define GSMPASSWORD "oi"
 
@@ -19,8 +19,8 @@ sim800Client s800;
 char imeicode[16];
 
 // Update these with values suitable for your network.
-//byte server[] = { 192, 168, 0, 14 };
-char server[] = "broker.hivemq.com";
+//byte server[] = { 192, 168, 0, 14 }; //your localhost server
+char server[] = "broker.hivemq.com"; //change with the server you want to use 
 
 
 void callback(char* topic, byte* payload, unsigned int length) {
@@ -44,7 +44,7 @@ void pub()
   Serial.print("test");
   Serial.print("->");
   Serial.println("bye bye");
-  client.publish("batata","bye bye");
+  client.publish("batata","bye bye"); //test messages
 }
 
 void setup()
